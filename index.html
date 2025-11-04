@@ -13,6 +13,7 @@
     <!-- Importação do conjunto de Ícones do Font Awesome -->
     <script src="https://kit.fontawesome.com/6c2e9979a8.js"></script>
     <script src="js/posts.js" defer></script>
+    <script src="js/texts.js" defer></script>
 
     <title>Pooryter X</title>
 </head>
@@ -43,7 +44,13 @@
         <h2>O que aconteceu hoje?</h2>
         <form action="">
             <label for="msg">Mensagem</label>
-            <textarea id="msg" autofocus></textarea>
+            <!--
+            Atributo "maxlength" indica quantidade máxima de caracteres  
+            É aceita para aquele campo
+            -->
+            <textarea id="msg" autofocus maxlength="100"></textarea>
+            <!-- Mostra quantos caracteres o conteúdo do textarea#msg tem -->
+            <p><span id="contagem">0</span>/100</p>
             <input type="button" value="Postar" id="btnPostar">
         </form>
     </main>
